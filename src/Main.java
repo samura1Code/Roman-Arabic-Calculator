@@ -45,7 +45,7 @@ public class Main {
 
         int result;
         // Проверка, находятся ли операнды в диапазоне от 0 до 10 включительно
-        if (((operandOne >= 0) && (operandTwo >= 0)) && ((operandOne <= 10) && (operandTwo <= 10))) {
+        if (((operandOne > 0) && (operandTwo > 0)) && ((operandOne <= 10) && (operandTwo <= 10))) {
             switch (operator) {
                 case '+':
                     result = operandOne + operandTwo;
@@ -67,7 +67,7 @@ public class Main {
                     throw new Exception("Некорректный оператор");
             }
         } else {
-            throw new Exception("Числа должны быть в диапазоне от 0 до 10 включительно.");
+            throw new Exception("Числа должны быть в диапазоне от 1 до 10 включительно.");
         }
         // Если операнды римские, конвертировать результат обратно в римские цифры
         if(isRoman(operandTwoStr)) {
